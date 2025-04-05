@@ -61,6 +61,7 @@ def send_math(message):
         b = a * x - c
         equ = f"{a}x - {c} = {b}"
         sol = (b + c) // a  
+    bot.send_message(message.chat.id, f"{equ} <tg-spoiler>  Ответ x = {sol} </tg-spoiler>", parse_mode='HTML')
 
 
 @bot.message_handler(commands=["about"])
