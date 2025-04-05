@@ -54,13 +54,13 @@ def send_math(message):
         equ = f"{a}x + {c} = {b}"
         sol = (b - c) // a
     elif operation == 2:
-        b = a * x - c
-        equ = f"{a}x - {c} = {b}"
-        sol = (b + c) // a
-    elif operation == 3:
         b = a * x * c
         equ = f"{a}x * {c} = {b}"
         sol = b // (a * c)
+    elif operation == 3:
+        b = a * x - c
+        equ = f"{a}x - {c} = {b}"
+        sol = (b + c) // a  
 
 
 @bot.message_handler(commands=["about"])
